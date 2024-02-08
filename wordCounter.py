@@ -68,11 +68,11 @@ wordCountFinal = dict(sortedCountList)
 reportWriter = open(inputFile+"-WordCountReport.txt",'w')
 reportWriter.writelines(["Word\t\t\t\t","Frequency\n"])
 for key in wordCountFinal:
-    if(len(key) < 4):
+    if(len(key) <= 7):
         reportWriter.writelines([key,"\t\t\t\t|\t",str(wordCountFinal[key]),"\n"])
-    elif(len(key) >= 4 and len(key) < 8):
+    elif(len(key) > 7 and len(key) <= 13):
         reportWriter.writelines([key,"\t\t\t|\t",str(wordCountFinal[key]),"\n"])
-    elif(len(key) >= 8 and len(key) < 12):
+    elif(len(key) > 13 and len(key) <= 23):
         reportWriter.writelines([key,"\t\t|\t",str(wordCountFinal[key]),"\n"])
     else:
         reportWriter.writelines([key,"\t|\t",str(wordCountFinal[key]),"\n"])
